@@ -1,0 +1,39 @@
+.authcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100dvh-80px);
+    padding-bottom: 20px;
+}
+
+.root {
+    min-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardbox {
+    width: 70%;
+}
+
+@media screen and (max-width : 1000px) {
+    .root {
+        min-width: 85%;
+    }
+
+    .cardbox {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .root {
+        min-width: 90%;
+    }
+
+    .cardbox {
+        width: 90%;
+    }
+
+}

@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import Image from "../Image";
 import { Link } from "react-router-dom";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -68,13 +74,18 @@ function Navbar() {
           >
             About
           </Link>
-          <Link
-            to="/login"
-            onClick={() => setOpen(false)}
-            className={styles.menuitem}
-          >
-            <button className={styles.loginbtn}>Login 👋</button>
-          </Link>
+          <SignedOut>
+            <Link
+              to="/login"
+              onClick={() => setOpen(false)}
+              className={styles.menuitem}
+            >
+              <button className={styles.loginbtn}>Login 👋</button>
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </div>
       {/* desktop menu */}
@@ -99,13 +110,18 @@ function Navbar() {
         <Link to="/" onClick={() => setOpen(false)} className={styles.menuitem}>
           About
         </Link>
-        <Link
-          to="/login"
-          onClick={() => setOpen(false)}
-          className={styles.menuitem}
-        >
-          <button className={styles.loginbtn}>Login 👋</button>
-        </Link>
+        <SignedOut>
+          <Link
+            to="/login"
+            onClick={() => setOpen(false)}
+            className={styles.menuitem}
+          >
+            <button className={styles.loginbtn}>Login 👋</button>
+          </Link>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );

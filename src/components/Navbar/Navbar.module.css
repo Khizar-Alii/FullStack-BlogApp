@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 99;
 }
 
 /* Logo Container */
@@ -21,6 +22,7 @@
 /* Mobile Menu Container */
 .mobilemenu {
     display: none;
+    z-index: 99;
 }
 
 /* Hamburger Menu Icon */
