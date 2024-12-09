@@ -1,0 +1,135 @@
+.postlists {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.postlistitemcontainer {
+    /* main container */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    /* left img */
+    .postlistitemimg {
+        width: 300px;
+        border-radius: 20px;
+        height: auto;
+    }
+
+    /* right container */
+    .listdetails {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        /* title */
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* itemdetails include posted by date category  */
+        .itemdetails {
+            display: flex;
+            gap: 4px;
+
+            span {
+                font-size: 14px;
+                color: grey;
+                font-weight: 400;
+            }
+
+            .itemlink {
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+
+        /* readmore btn at bottom */
+        .readmore {
+            font-size: 12px;
+            color: blue;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+
+/* media screen styles for 786px width */
+
+@media screen and (max-width : 786px) {
+    .postlistitemcontainer {
+        border-bottom: 1px solid grey;
+    }
+
+    .postlistitemcontainer {
+        .postlistimgcontainer {
+            display: none;
+        }
+
+        .readmore {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/* media screen styles for 500px width */
+
+@media screen and (max-width : 500px) {
+    .postlistitemcontainer {
+        border-bottom: none;
+        flex-direction: column;
+    }
+
+    .postlistitemcontainer {
+        .postlistimgcontainer {
+            display: block;
+        }
+
+        .postlistitemimg {
+            width: 100%;
+        }
+
+        .readmore {
+            margin-bottom: 1px;
+        }
+
+        .itemdetails {
+            padding: 6px 0;
+            gap: 1px;
+            span {
+                font-size: 10px;
+                color: grey;
+                font-weight: 400;
+            }
+
+            .itemlink {
+                font-size: 10px;
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+
+
+/* media screen styles for 300px width */
+
+@media screen and (max-width : 400px) {
+    .itemdetails {
+        span {
+            font-size: 10px !important;
+        }
+
+        .itemlink {
+            font-size: 10px !important;
+        }
+    }
+}

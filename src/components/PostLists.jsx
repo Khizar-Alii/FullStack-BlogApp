@@ -1,11 +1,21 @@
 import React from 'react'
 import styles from "../Styles/PostLists.module.css"
-import Image from './Image'
+import PostListsItem from './PostListsItem'
 
 const PostLists = () => {
   return (
-    <div>
-      
+    <div className={styles.postlists}>
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
+      <PostListsItem />
     </div>
   )
 }

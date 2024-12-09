@@ -1,7 +1,7 @@
 import React from "react";
 import { IKImage } from "imagekitio-react";
 
-function Image({ src, classname, alt, w, h,styles }) {
+function Image({ src, classname, alt, w, h, styles }) {
   return (
     <IKImage
       urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}
@@ -13,6 +13,12 @@ function Image({ src, classname, alt, w, h,styles }) {
       height={h}
       className={classname}
       style={styles}
+      transformation={[
+        {
+          width: w,
+          height: h,
+        },
+      ]}
     />
   );
 }
