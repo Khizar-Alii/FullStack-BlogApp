@@ -1,0 +1,100 @@
+.homecontainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 4px;
+}
+
+.hometop {
+    display: flex;
+    gap: 4px;
+    text-decoration: none;
+
+    span {
+        color: blue;
+        font-weight: 800;
+    }
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: #1F2937;
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.introbtn {
+    display: none;
+    position: relative;
+}
+
+.svg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1em;
+    animation: spin 1s linear infinite;
+    animation-duration: 10000ms;
+
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.introbtnbtm {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    width: 5rem;
+    height: 5rem;
+    background-color: #1E40AF;
+}
+
+@media (min-width: 768px) {
+    .intro {
+        h1 {
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    .introbtn {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro {
+        h1 {
+            font-size: 3.75rem;
+            line-height: 1;
+        }
+    }
+}

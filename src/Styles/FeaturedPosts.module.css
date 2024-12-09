@@ -1,0 +1,259 @@
+.feature {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: row;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.featureleft,
+.featureright {
+    flex: 2;
+}
+
+
+/* Left side */
+
+.featureleft {
+    .img {
+        width: 100%;
+    }
+
+    .featureleftcontent {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .featurecategory {
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        span {
+            color: grey;
+            font-size: 14px;
+        }
+    }
+
+    .featuretitle {
+        font-size: 18px;
+        font-weight: 800;
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+/* Right Side */
+
+.featureright {
+    .featurerightcontainer {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+        height: 33%;
+        padding: 3px 0;
+        gap: 12px;
+
+        .featurerightimg {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+        }
+
+        .featurerightcontent {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            h1 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .featurecategory {
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            span {
+                color: grey;
+                font-size: 14px;
+            }
+        }
+
+        .featuretitle {
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+        }
+
+    }
+}
+
+/* media query for 900px width */
+
+@media screen and (max-width : 900px) {
+    .featureleft {
+        .featureleftcontent {
+            h1 {
+                font-size: 14px;
+            }
+
+            .featurecategory {
+                font-size: 12px;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        }
+
+        .featuretitle {
+            font-size: 12px;
+        }
+    }
+
+    .featureright {
+        .featurerightcontainer {
+            .featurerightimg {
+                width: 100px;
+                height: 100px;
+            }
+
+            .featurerightcontent {
+
+                h1 {
+                    font-size: 14px;
+                }
+
+                .featurecategory {
+                    font-size: 12px;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+            }
+
+            .featuretitle {
+                font-size: 12px;
+            }
+
+        }
+    }
+
+}
+
+/* media query for 786px width */
+
+@media screen and (max-width : 786px) {
+    .feature {
+        flex-direction: column;
+    }
+
+    .featureright {
+        .featurerightcontainer {
+            .featurerightimg {
+                width: 150px;
+                height: 150px;
+            }
+
+            .featurerightcontent {
+
+                h1 {
+                    font-size: 16px;
+                }
+
+                .featurecategory {
+                    font-size: 14px;
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .featuretitle {
+                font-size: 14px;
+            }
+
+        }
+    }
+}
+
+
+/* media query for 500px width */
+@media screen and (max-width : 500px) {
+
+    .featureright {
+        .featurerightcontainer {
+            .featurerightimg {
+                width: 100px;
+                height: auto;
+            }
+
+            .featurerightcontent {
+
+                h1 {
+                    font-size: 12px;
+                }
+
+                .featurecategory {
+                    font-size: 10px;
+                }
+
+                span {
+                    font-size: 10px;
+                }
+            }
+
+            .featuretitle {
+                font-size: 10px;
+            }
+
+        }
+    }
+}
+
+
+/* media query for 300px width */
+
+@media screen and (max-width : 300px) {
+
+    .featureright {
+        .featurerightcontainer {
+            .featurerightimg {
+                width: 80px;
+                height: auto;
+            }
+
+            .featurerightcontent {
+
+                h1 {
+                    font-size: 8px;
+                }
+
+                .featurecategory {
+                    font-size: 6px;
+                }
+
+                span {
+                    font-size: 6px;
+                }
+            }
+
+            .featuretitle {
+                font-size: 8px;
+                font-weight: 600;
+            }
+
+        }
+    }
+}
